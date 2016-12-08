@@ -23,9 +23,12 @@ namespace Vsite.CSharp
         public static void PoziviPrekoDelegata()
         {
             // TODO: Instancirati delegata tipa MojDelegat metodom StatičkaMetoda te pozvati delegata
-
+            MojDelegat md = StatičkaMetoda;
+            md();
             // TODO: Gornjem delegatu pridružiti metodu MetodaInstance te ponovno pozvati delegata
-
+            StatičkeNestatičkeDelegatskeMetode o = new StatičkeNestatičkeDelegatskeMetode();
+            md += o.MetodaInstance;
+            md();
         }
 
         static void Main(string[] args)
